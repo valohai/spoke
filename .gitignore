@@ -1,7 +1,9 @@
 *.egg
 *.egg-info/
+*.json
 *.log
 *.py[cod]
+*.sqlite3
 .cache
 .coverage
 .eggs/
@@ -14,4 +16,3 @@ eggs/
 htmlcov/
 var/
 venv/
-*.json
