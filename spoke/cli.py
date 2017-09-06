@@ -1,19 +1,26 @@
-import click
+import os
 from importlib import import_module
 
-import os
+import click
 
-import spoke.dump
+from spoke.commands.dump_commands import (
+    dump_companies,
+    dump_contact_lists,
+    dump_contacts,
+    dump_deals,
+    dump_engagements,
+    dump_owners,
+)
 
 
 class PluginCLI(click.MultiCommand):
     command_map = {
-        'dump-companies': spoke.dump.dump_companies,
-        'dump-contact-lists': spoke.dump.dump_contact_lists,
-        'dump-contacts': spoke.dump.dump_contacts,
-        'dump-deals': spoke.dump.dump_deals,
-        'dump-engagements': spoke.dump.dump_engagements,
-        'dump-owners': spoke.dump.dump_owners,
+        'dump-companies': dump_companies,
+        'dump-contact-lists': dump_contact_lists,
+        'dump-contacts': dump_contacts,
+        'dump-deals': dump_deals,
+        'dump-engagements': dump_engagements,
+        'dump-owners': dump_owners,
     }
 
     def list_commands(self, ctx):
