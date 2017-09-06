@@ -1,0 +1,17 @@
+*.egg
+*.egg-info/
+*.log
+*.py[cod]
+.cache
+.coverage
+.eggs/
+.env
+.idea
+.tox/
+build/
+dist/
+eggs/
+htmlcov/
+var/
+venv/
+*.json
