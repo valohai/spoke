@@ -10,3 +10,14 @@ def write_dumpfile(filename, data):
             n=len(data),
             len=outf.tell(),
         ))
+
+
+class DotDict:
+    def __init__(self, dict):
+        self.dict = dict
+
+    def __getattr__(self, item):
+        value = (self.dict.get(item) if self.dict else None)
+        if isinstance(value, dict):
+            return DotDict(value)
+        return value

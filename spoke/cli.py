@@ -12,6 +12,7 @@ from spoke.commands.dump_commands import (
     dump_engagements,
     dump_owners,
 )
+from spoke.commands.engagement_commands import list_new_engagements
 
 
 class PluginCLI(click.MultiCommand):
@@ -22,6 +23,7 @@ class PluginCLI(click.MultiCommand):
         'dump-deals': dump_deals,
         'dump-engagements': dump_engagements,
         'dump-owners': dump_owners,
+        'list-new-engagements': list_new_engagements,
         'update-cache': update_cache,
     }
 
