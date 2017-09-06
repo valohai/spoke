@@ -3,6 +3,7 @@ from importlib import import_module
 
 import click
 
+from spoke.commands.cache_commands import update_cache
 from spoke.commands.dump_commands import (
     dump_companies,
     dump_contact_lists,
@@ -21,6 +22,7 @@ class PluginCLI(click.MultiCommand):
         'dump-deals': dump_deals,
         'dump-engagements': dump_engagements,
         'dump-owners': dump_owners,
+        'update-cache': update_cache,
     }
 
     def list_commands(self, ctx):
